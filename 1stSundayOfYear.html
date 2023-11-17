@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check 1st january of Sundays</title>
+</head>
+<body>
+  <script>
+    for (let i = 2014; i <= 2050; i++) {
+      if (new Date(i, 0, 1).getDay() === 0) {
+        console.log(`1st January of ${i} is a Sunday.`);
+        document.write(`<p> 1st January of ${i} is a Sunday. </p>`);
+      }
+    }
+  </script>
+</body>
+</html>
