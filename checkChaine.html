@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Chaine</title>
+</head>
+<body>
+
+    <script>
+        function checkChaine(chaine) {
+            if (chaine.length > 0 && (chaine[0] === 'p' || chaine[chaine.length - 1] === 'p')) {
+                if (chaine[chaine.length - 1] !== 'p') {
+                    return chaine.slice(1);
+                } else if (chaine[0] !== 'p') {
+                    return chaine.slice(0, -1);
+                } else {
+                    return chaine.slice(1, -1);
+                }
+            } else {
+                return chaine;
+            }
+        }
+
+        var chaine = prompt("Entrez une chaîne :");
+        var chaineRes = checkChaine(chaine);
+        console.log(`La chaine resultat: ${chaineRes}`);
+        document.write(`${chaineRes}`)
+    </script>
+
+</body>
+</html>
