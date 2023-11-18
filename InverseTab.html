@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Inversion tab </title>
+</head>
+<body>
+
+    <script>
+        function inverseTableau(tab) {
+            var l = tab.length;
+            for (var i = 0; i < l/2; i++) {
+                var c = tab[i];
+                tab[i] = tab[l - 1 - i];
+                tab[l - 1 - i] = c;
+            }
+
+            return tab;
+        }
+
+        var tab = [1, 2, 3, 4];
+        var tab2 = inverseTableau(tab)
+        document.write(`tab : ${tab2}`);
+    
+    </script>
+
+</body>
+</html>
+
