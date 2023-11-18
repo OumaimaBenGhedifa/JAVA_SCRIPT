@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Chaine</title>
+</head>
+<body>
+
+    <script>
+       function checkChaine(chaine) {
+    return (chaine.length > 0 && (chaine.startsWith('p') || chaine.endsWith('p')))
+        ? (chaine.startsWith('p') && chaine.endsWith('p') ? chaine.slice(1, -1) : (chaine.endsWith('p') ? chaine.slice(0, -1) : chaine.slice(1)))
+        : chaine;
+    }
+
+    var chaine = prompt("Entrez une chaîne :");
+    var chaineRes = checkChaine(chaine);
+    console.log(`La chaine resultat: ${chaineRes}`);
+    document.write(`${chaineRes}`)
+    </script>
+
+</body>
+</html>
