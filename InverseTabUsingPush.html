@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverse Tab using push</title>
+</head>
+<body>
+<script>
+    function inverseTableau(tab) {
+        var reversedTab = [];
+
+        for (var i = tab.length - 1; i >= 0; i--) {
+            reversedTab.push(tab[i]);
+        }
+
+        return reversedTab;
+    }
+
+    var tab = [1, 2, 3, 4];
+    var inversedTab = inverseTableau(tab);
+    document.write(`Inversed Tab: ${inversedTab}`)
+</script>    
+</body>
+</html>
