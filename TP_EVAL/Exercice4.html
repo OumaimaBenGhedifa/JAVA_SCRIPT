@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 4 - TP EVAL</title>
+</head>
+<body>
+  <script>
+   
+    class Shape {
+      
+      constructor(couleur) {
+        this.couleur = couleur;
+      }
+
+      getDescription() {
+        return `Une forme de couleur ${this.couleur}`;
+      }
+    }
+
+  
+    class Circle extends Shape {
+      constructor(couleur, rayon) {
+        super(couleur);
+        this.rayon = rayon;
+      }
+
+      getDescription() {
+        return `${super.getDescription()} possède un rayon de ${this.rayon}`;
+      }
+    }
+
+    const circle = new Circle('noir', 8);
+    const element = document.createElement('p');
+    element.textContent = `Description du cercle : ${circle.getDescription()}`;
+    document.body.appendChild(element);
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 1 - TP EVAL </title>
+</head>
+<body>
+  <script>
+    const carre = (number, defaultValue = 5) => {
+      return number ** 2 * defaultValue;
+    };
+
+    const result = carre(5);
+    const element = document.createElement('p');
+    element.textContent = `Le resultat est : ${result}`;
+    document.body.appendChild(element);
+  </script>
+</body>
+</html>

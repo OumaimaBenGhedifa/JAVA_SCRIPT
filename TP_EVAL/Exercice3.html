@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 3 - TP EVAL</title>
+</head>
+<body>
+  <script>
+    const livres = [
+      { titre: 'Livre1', auteur: 'Oumaima' },
+      { titre: 'Livre2', auteur: 'Eya' },
+      { titre: 'Livre3', auteur: 'Malek' },
+    ];
+
+    const titreLivreParAuteur = livres.map(l => `${l.titre} par ${l.auteur}`);
+    const element = document.createElement('p');
+    element.textContent = `Liste des livres : ${titreLivreParAuteur.join(', ')}`;
+    document.body.appendChild(element);
+  </script>
+</body>
+</html>

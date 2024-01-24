@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 2 - TP EVAL</title>
+</head>
+<body>
+  <script>
+    const PersonInfos = ({ nom, age, ville }) => {
+      return `${nom}, ${age} ans, vit à ${ville}`;
+    };
+
+    const person = { 
+        nom: 'Oumaima',
+        age: 22,
+        ville: 'Tunis' 
+        };
+   
+    const element = document.createElement('p');
+    element.textContent = `Les informations : ${PersonInfos(person)}`;
+    document.body.appendChild(element);
+  </script>
+</body>
+</html>
